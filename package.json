@@ -1,0 +1,72 @@
+{
+  "name": "root",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snek-at/snek-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snek-at/snek-tools/issues"
+  },
+  "homepage": "https://github.com/snek-at/snek-tools#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.6",
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.2.1",
+    "semantic-release": "^17.4.4",
+    "semantic-release-monorepo": "^7.0.5",
+    "typescript": "^4.3.5",
+    "typescript-tslint-plugin": "^1.0.1"
+  },
+  "scripts": {
+    "build:all": "tsc -b",
+    "build:all:ci": "tsc -b --verbose",
+    "build:all:cleanly": "yarn clean && yarn && yarn build:all",
+    "build": "cross-env NODE_ENV=production npm run build:packages",
+    "build:clean": "npm run build:packages -- --clean",
+    "build:packages": "tsc -b packages",
+    "build:packages:ci": "npm run build:packages -- --verbose",
+    "build:packages:watch": "npm run build:packages -- --watch",
+    "pack": "lerna run pack --stream",
+    "dist": "lerna run dist --stream",
+    "dist:all": "lerna run dist:all --scope nteract --stream",
+    "release": "HUSKY=0 yarn workspaces run semantic-release -e semantic-release-monorepo",
+    "clean": "lerna clean --yes && npm run build:clean && rimraf node_modules",
+    "prettify": "prettier --write '**/*.{ts,tsx,js,json}' '!**/{dist,lib.git,package.json,build}/**'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "postinstall": "patch-package",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.tsx,*.ts,*.js,!*js.snap": [
+      "prettier --write"
+    ],
+    "*.json,!package.json": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
