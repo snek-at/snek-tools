@@ -31,7 +31,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
   const [imageViewer, setImageViewer] = useState<string | null>()
   const [pdfViewer, setPdfViewer] = useState<string | null>()
   const [snekStudio, setSnekStudio] = useState<string | null>()
-
   const [showModal, setShowModal] = useState<{
     type: 'IMAGE_VIEWER' | 'PDF_VIEWER' | 'SNEK_STUDIO'
     uuid: string
