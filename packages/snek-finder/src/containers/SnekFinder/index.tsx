@@ -19,7 +19,7 @@ export type SnekFinderProps = {
 
 const initData: FinderData = {
   'ae4b3bf8-6ed2-4ac6-bf18-722321af298c': {
-    name: 'Snek Root Folder2',
+    name: 'Snek Root Folder',
     createdAt: '',
     modifiedAt: '',
     isFolder: true,
@@ -68,9 +68,9 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
     if (!(file as FinderFolderItem).isFolder) {
       const {mimeType} = file as FinderFileItem
       if (mimeType?.startsWith('image/')) {
-        setShowModal({uuid, type: "IMAGE_VIEWER"})
+        setShowModal({uuid, type: 'IMAGE_VIEWER'})
       } else if (mimeType?.startsWith('application/pdf')) {
-        setShowModal({uuid, type: "PDF_VIEWER"})
+        setShowModal({uuid, type: 'PDF_VIEWER'})
       }
     }
   }
