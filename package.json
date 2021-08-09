@@ -42,7 +42,7 @@
     "pack": "lerna run pack --stream",
     "dist": "lerna run dist --stream",
     "dist:all": "lerna run dist:all --scope nteract --stream",
-    "release": "yarn workspaces run semantic-release -e semantic-release-monorepo",
+    "release": "HUSKY=0 yarn workspaces run semantic-release -e semantic-release-monorepo",
     "clean": "lerna clean --yes && npm run build:clean && rimraf node_modules",
     "prettify": "prettier --write '**/*.{ts,tsx,js,json}' '!**/{dist,lib.git,package.json,build}/**'",
     "storybook": "start-storybook -p 6006",
