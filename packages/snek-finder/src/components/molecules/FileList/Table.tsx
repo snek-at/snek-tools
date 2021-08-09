@@ -23,8 +23,6 @@ const TheTable: React.FC<TableProps> = props => {
   const [records, setRecords] = useState(props.records)
   const [selectedRows, setSelectedRows] = useState<number[]>([]) // currently only one selection is supported
 
-  console.log('selectedRows', selectedRows)
-
   useEffect(() => {
     setRecords(props.records)
   }, [props.records])

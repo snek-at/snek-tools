@@ -62,7 +62,6 @@ const Finder: React.FC<SnekFinderProps> = props => {
   >([{index: rootUUID, text: data[rootUUID].name}])
 
   const [selectedFiles, setSelectedFiles] = useState<number[]>([])
-  console.log('selectedFiles', selectedFiles)
   const [contextMenu, setContextMenu] = useState<{
     id: number | undefined
     spawnX: number
@@ -187,7 +186,6 @@ const Finder: React.FC<SnekFinderProps> = props => {
         }
       }
 
-      console.log('fileDataUrl', fileDataUrl)
 
       props.onDataChanged(newData, {type: 'ADD', payload: {uuid, file}})
     }

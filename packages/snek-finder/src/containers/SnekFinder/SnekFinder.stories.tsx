@@ -13,8 +13,6 @@ const Template: Story<SnekFinderProps> = args => <SnekFinder {...args} />
 
 export const Primary: Story<SnekFinderProps> = Template.bind({})
 
-console.log(IPFSBackend)
-
 IPFSBackend.onBackendLinkChange = (link: string) => {
   console.log(link)
 }

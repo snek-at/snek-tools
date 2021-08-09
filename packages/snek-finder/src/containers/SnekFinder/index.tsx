@@ -43,8 +43,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
     const fn = async () => {
       const {data} = await backend.readIndex()
 
-      console.log('data', data)
-
       setData(data || initData)
     }
 
@@ -52,7 +50,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
   }, [])
 
   const handleDataChange = async (newData: any, action: SnekFinderAction) => {
-    console.log('start uplaoding')
     setData(newData)
 
     if (action.type === 'ADD') {
@@ -66,7 +63,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
         })
       }
     }
-    console.log('handleDataChange updateData start', newData)
     backend.writeIndex(newData)
   }
 
@@ -82,7 +78,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
       }
     }
   }
-  console.log('ada', data, imageViewer)
 
   const file = showModal && (data[showModal.uuid] as FinderFileItem)
   return (

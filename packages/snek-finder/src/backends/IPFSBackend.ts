@@ -21,11 +21,9 @@ export class IPFSBackend extends Backend {
     const response = await (await fetch(this.initBackendLink)).json()
 
     await this.writeIndex(response)
-    console.log(response)
   }
 
   async readIndex() {
-    console.log('ri')
     if (window) {
       const getIndexData = () => {
         const indexData = window.localStorage.getItem(this.indexKey)
@@ -49,14 +47,12 @@ export class IPFSBackend extends Backend {
   }
 
   async writeIndex(index: object) {
-    console.log('wi')
     if (window) {
       // make a file from index including date in name
       const indexData = JSON.stringify(index)
       const indexFile = new File([indexData], `${Date.now()}.json`)
       const indexUrl = await this.upload(indexFile)
 
-      console.log('writeIndex uplaod finished')
       this.onBackendLinkChange(indexUrl)
 
       window.localStorage.setItem(this.indexKey, indexData)
