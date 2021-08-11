@@ -1,4 +1,4 @@
 {
   "files": [],
-  "references": [{"path": "snek-finder"}]
+  "references": [{"path": "react-lottie"}, {"path": "snek-finder"}]
 }
