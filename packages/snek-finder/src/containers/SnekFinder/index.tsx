@@ -19,7 +19,7 @@ export type SnekFinderProps = {
 
 const initData: FinderData = {
   'ae4b3bf8-6ed2-4ac6-bf18-722321af298c': {
-    name: 'Snek Root Folder',
+    name: 'SF',
     createdAt: '',
     modifiedAt: '',
     isFolder: true,

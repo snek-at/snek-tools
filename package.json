@@ -48,7 +48,6 @@
     "prettify": "prettier --write '**/*.{ts,tsx,js,json}' '!**/{dist,lib.git,package.json,build}/**'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "postinstall": "patch-package",
     "prepare": "husky install"
   },
   "lint-staged": {
