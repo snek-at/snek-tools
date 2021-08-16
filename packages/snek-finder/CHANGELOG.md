@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.3](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.2...@snek-at/snek-finder-v1.0.0-beta.3) (2021-08-16)
+
+
+### Features
+
+* **storybook-addon:** initial commit ([4a92b96](https://github.com/snek-at/snek-tools/commit/4a92b967e08e6ae43c12588a1bbab604c4d98677))
+
 # [@snek-at/snek-finder-v1.0.0-beta.2](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.1...@snek-at/snek-finder-v1.0.0-beta.2) (2021-08-09)
 
 
