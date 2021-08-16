@@ -4,6 +4,9 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "EUPL-1.2",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "lottie-web": "^5.7.12"
   }
