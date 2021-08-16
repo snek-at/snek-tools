@@ -1,7 +1,3 @@
-import {ChakraProvider, CSSReset, extendTheme} from '@chakra-ui/react'
-import {addDecorator} from '@storybook/react'
-import React from 'react'
-
 export const parameters = {
   actions: {argTypesRegex: '^on[A-Z].*'},
   layout: 'fullscreen',
@@ -12,10 +8,3 @@ export const parameters = {
     }
   }
 }
-
-addDecorator(storyFn => (
-  <ChakraProvider theme={extendTheme({config: {initialColorMode: 'dark'}})}>
-    <CSSReset />
-    {storyFn()}
-  </ChakraProvider>
-))

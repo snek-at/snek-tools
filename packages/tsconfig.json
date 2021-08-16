@@ -1,4 +1,8 @@
 {
   "files": [],
-  "references": [{"path": "react-lottie"}, {"path": "snek-finder"}]
+  "references": [
+    {"path": "storybook-addon-chakra-ui"},
+    {"path": "react-lottie"},
+    {"path": "snek-finder"}
+  ]
 }

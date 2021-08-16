@@ -1,0 +1,18 @@
+{
+  "name": "@snek-at/storybook-addon-chakra-ui",
+  "version": "1.0.0",
+  "main": "dist/preset.js",
+  "license": "EUPL-1.2",
+  "files": [
+    "dist",
+    "preset.js"
+  ],
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.6",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@storybook/addons": "^6.3.7",
+    "framer-motion": "^4",
+    "react": "^17.0.2"
+  }
+}

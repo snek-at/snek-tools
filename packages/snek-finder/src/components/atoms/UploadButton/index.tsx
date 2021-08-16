@@ -7,7 +7,7 @@
  * Use of this source code is governed by an EUPL-1.2 license that can be found
  * in the LICENSE file at https://snek.at/license
  */
-import {IconButton} from '@chakra-ui/react'
+import {IconButton, useColorMode} from '@chakra-ui/react'
 import {FaFileUpload} from '@react-icons/all-files/fa/FaFileUpload'
 import React from 'react'
 import {useDropzone} from 'react-dropzone'
@@ -27,7 +27,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({onUpload, accept}) => {
   return (
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      {<IconButton aria-label="" icon={<FaFileUpload />} />}
+      <IconButton aria-label="" icon={<FaFileUpload />} />
     </div>
   )
 }
