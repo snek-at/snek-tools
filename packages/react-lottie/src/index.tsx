@@ -44,8 +44,8 @@ export const Lottie: React.FC<AnimationProps> = ({
   const [lottieResult, setLottieResult] = useState<LottieFnResult | null>(null)
 
   useEffect(() => {
-    if (lottieResult?.creator) {
-      lottieResult?.creator.animation.destroy()
+    if (lottieResult && lottieResult.creator) {
+      lottieResult && lottieResult.creator.animation.destroy()
     }
 
     if (divRef.current) {
@@ -54,7 +54,14 @@ export const Lottie: React.FC<AnimationProps> = ({
   }, forceReloadDeps || [])
 
   return children({
-    container: <div ref={divRef} {...lottieResult?.containerProps}></div>,
-    animation: lottieResult?.creator?.animation as any
+    container: (
+      <div
+        ref={divRef}
+        {...(lottieResult && lottieResult.containerProps)}></div>
+    ),
+    animation:
+      lottieResult &&
+      lottieResult.creator &&
+      (lottieResult.creator.animation as any)
   })
 }
