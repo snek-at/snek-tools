@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.5](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.4...@snek-at/snek-finder-v1.0.0-beta.5) (2021-08-22)
+
+
+### Bug Fixes
+
+* **imageviewer:** position independent from parent ([8262e11](https://github.com/snek-at/snek-tools/commit/8262e1199616f4a9f39fb185a7c25e052b55540f))
+
 # [@snek-at/snek-finder-v1.0.0-beta.4](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.3...@snek-at/snek-finder-v1.0.0-beta.4) (2021-08-22)
 
 
