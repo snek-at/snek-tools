@@ -30,7 +30,7 @@ const ImageViewer: React.FC<ImageViewerProps> = props => {
   const [scale, setScale] = useState(1)
 
   return (
-    <Portal>
+    <Portal appendToParentPortal={false}>
       <Box pos="absolute" top={0} zIndex="popover" w="full" h="full">
         <TransformWrapper
           initialScale={scale}
