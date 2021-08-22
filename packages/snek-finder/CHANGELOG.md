@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.6](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.5...@snek-at/snek-finder-v1.0.0-beta.6) (2021-08-22)
+
+
+### Bug Fixes
+
+* **imageviewer:** set portal appendToParentPortal to false ([b8d9c1b](https://github.com/snek-at/snek-tools/commit/b8d9c1b3ac91dd21a7b770b579e95681f27b9f35))
+
 # [@snek-at/snek-finder-v1.0.0-beta.5](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.4...@snek-at/snek-finder-v1.0.0-beta.5) (2021-08-22)
 
 
