@@ -67,9 +67,9 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
 
     if (!(file as FinderFolderItem).isFolder) {
       const {mimeType} = file as FinderFileItem
-      if (mimeType?.startsWith('image/')) {
+      if (mimeType && mimeType.startsWith('image/')) {
         setShowModal({uuid, type: 'IMAGE_VIEWER'})
-      } else if (mimeType?.startsWith('application/pdf')) {
+      } else if (mimeType && mimeType.startsWith('application/pdf')) {
         setShowModal({uuid, type: 'PDF_VIEWER'})
       }
     }
@@ -86,14 +86,14 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
           onItemOpen: handleItemOpen
         }}
       />
-      {showModal?.type === 'IMAGE_VIEWER' && file && (
+      {showModal && showModal.type === 'IMAGE_VIEWER' && file && (
         <ImageViewer
           src={file.src}
           onOpenStudio={() => setShowModal({...showModal, type: 'SNEK_STUDIO'})}
           onClose={() => setShowModal(null)}
         />
       )}
-      {showModal?.type === 'PDF_VIEWER' && file && (
+      {showModal && showModal.type === 'PDF_VIEWER' && file && (
         <PdfViewer
           src={file.src}
           overlay
@@ -101,7 +101,7 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
           onClose={() => setShowModal(null)}
         />
       )}
-      {showModal?.type === 'SNEK_STUDIO' && file && (
+      {showModal && showModal.type === 'SNEK_STUDIO' && file && (
         <SnekStudio
           src={file.src}
           onComplete={src => {

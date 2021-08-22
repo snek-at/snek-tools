@@ -186,7 +186,6 @@ const Finder: React.FC<SnekFinderProps> = props => {
         }
       }
 
-
       props.onDataChanged(newData, {type: 'ADD', payload: {uuid, file}})
     }
 
@@ -345,9 +344,9 @@ const Finder: React.FC<SnekFinderProps> = props => {
       } else {
         const {mimeType, src} = fileItem
 
-        if (mimeType?.startsWith('image/')) {
+        if (mimeType && mimeType.startsWith('image/')) {
           prefix = <Image w={6} h={6} src={src}></Image>
-        } else if (mimeType?.startsWith('application/pdf')) {
+        } else if (mimeType && mimeType.startsWith('application/pdf')) {
           prefix = <Icon as={FaFilePdf} w={6} h={6} />
         } else {
           prefix = <Icon as={FaFile} w={6} h={6} />
@@ -389,7 +388,7 @@ const Finder: React.FC<SnekFinderProps> = props => {
     } else {
       const {mimeType, src, previewSrc} = fileItem
 
-      if (mimeType?.includes('image/')) {
+      if (mimeType && mimeType.includes('image/')) {
         props['previewImageSrc'] = src
       } else {
         if (previewSrc) {
