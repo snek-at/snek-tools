@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.4](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.3...@snek-at/snek-finder-v1.0.0-beta.4) (2021-08-22)
+
+
+### Bug Fixes
+
+* remove optional chaining ([670776b](https://github.com/snek-at/snek-tools/commit/670776be1a317e9fb99ace25c8318aea574835dc))
+
 # [@snek-at/snek-finder-v1.0.0-beta.3](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.2...@snek-at/snek-finder-v1.0.0-beta.3) (2021-08-16)
 
 
