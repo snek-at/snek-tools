@@ -2,15 +2,9 @@ import {Meta, Story} from '@storybook/react'
 
 import ImageViewer, {ImageViewerProps} from '.'
 
-const styles = {
-  transform: 'scale(1)',
-  height: '100vh'
-}
-
 export default {
   title: 'Organisms/ImageViewer',
-  component: ImageViewer,
-  decorators: [storyFn => <div style={styles}>{storyFn()}</div>]
+  component: ImageViewer
 } as Meta
 
 const Template: Story<ImageViewerProps> = args => <ImageViewer {...args} />

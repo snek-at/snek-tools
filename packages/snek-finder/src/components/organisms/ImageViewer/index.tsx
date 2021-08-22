@@ -31,7 +31,7 @@ const ImageViewer: React.FC<ImageViewerProps> = props => {
 
   return (
     <Portal appendToParentPortal={false}>
-      <Box pos="absolute" top={0} zIndex="popover" w="full" h="full">
+      <Box pos="absolute" top={0} zIndex="popover" w="100%" h="100vh">
         <TransformWrapper
           initialScale={scale}
           doubleClick={{disabled: true}}
