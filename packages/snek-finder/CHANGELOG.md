@@ -1,3 +1,11 @@
+# [@snek-at/snek-finder-v1.0.0-beta.7](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.6...@snek-at/snek-finder-v1.0.0-beta.7) (2021-08-22)
+
+
+### Bug Fixes
+
+* **imageviewer:** update height to 100vh ([3349ef0](https://github.com/snek-at/snek-tools/commit/3349ef01983c87e876cee66c3c502a2fc9e71446))
+* **pdfviewer:** use portal to render PdfViewer at document root ([864a2bd](https://github.com/snek-at/snek-tools/commit/864a2bd3ac2c0093ec3ec84e7390b3e054721fb2))
+
 # [@snek-at/snek-finder-v1.0.0-beta.6](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.5...@snek-at/snek-finder-v1.0.0-beta.6) (2021-08-22)
 
 
