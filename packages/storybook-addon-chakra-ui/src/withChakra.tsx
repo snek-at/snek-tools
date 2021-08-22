@@ -1,35 +1,44 @@
-import {
-  ChakraProvider,
-  ColorMode,
-  extendTheme,
-  useColorMode
-} from '@chakra-ui/react'
+import {ChakraProvider, extendTheme, useColorMode} from '@chakra-ui/react'
 import {StoryFn, StoryContext} from '@storybook/addons'
-import * as React from 'react'
+import addons from '@storybook/addons'
+import {UPDATE_GLOBALS} from '@storybook/core-events'
+import {useEffect} from 'react'
 
 const theme = extendTheme({})
 
-type ChakraColorModeToggleProps = {
-  colorMode: ColorMode
-}
-const ChakraColorModeToggle: React.FC<ChakraColorModeToggleProps> = ({
-  colorMode
-}) => {
-  const {setColorMode} = useColorMode()
-
-  setColorMode(colorMode)
-
-  return null
-}
-
 export function withChakra(Story: StoryFn<JSX.Element>, context: StoryContext) {
   const chakraParameters = context.parameters.chakra
-  const isDarkmode = context.globals.isDarkmode
 
   return (
     <ChakraProvider theme={theme} {...chakraParameters}>
-      <ChakraColorModeToggle colorMode={isDarkmode ? 'dark' : 'light'} />
       <Story {...context} />
     </ChakraProvider>
   )
+}
+
+export function withChakraColorMode(
+  Story: StoryFn<JSX.Element>,
+  context: StoryContext
+) {
+  const {colorMode, setColorMode} = useColorMode()
+  const isDarkMode = colorMode === 'dark'
+  const isGlobalDarkMode = context.globals.isDarkmode
+
+  useEffect(() => {
+    if (isGlobalDarkMode !== isDarkMode) {
+      setColorMode(isGlobalDarkMode ? 'dark' : 'light')
+    }
+  }, [isGlobalDarkMode])
+
+  useEffect(() => {
+    if (isGlobalDarkMode !== isDarkMode) {
+      addons.getChannel().emit(UPDATE_GLOBALS, {
+        globals: {
+          isDarkmode: isDarkMode
+        }
+      })
+    }
+  }, [isDarkMode])
+
+  return <Story {...context} />
 }

@@ -12,8 +12,6 @@ const CMSelector = () => {
 
   const isDarkmode = globals['isDarkmode'] || false
 
-  console.log('selector', globals['isDarkmode'], isDarkmode)
-
   // Function that will update the global value and trigger a UI refresh.
   const refreshAndUpdateGlobal = () => {
     // Updates Storybook global value

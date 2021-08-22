@@ -1,4 +1,4 @@
-import {ChakraProvider} from '@chakra-ui/react'
+import {ChakraProvider, ColorModeProvider} from '@chakra-ui/react'
 import {addons, types} from '@storybook/addons'
 import React from 'react'
 
