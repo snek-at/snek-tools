@@ -1,3 +1,10 @@
+# [@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.4](https://github.com/snek-at/snek-tools/compare/@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.3...@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.4) (2021-08-23)
+
+
+### Bug Fixes
+
+* **package.json:** add files ([8fbada2](https://github.com/snek-at/snek-tools/commit/8fbada2f5e967d6a40a34abe82af99f8a87666de))
+
 # [@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.3](https://github.com/snek-at/snek-tools/compare/@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.2...@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.3) (2021-08-23)
 
 
