@@ -1,6 +1,7 @@
 {
   "files": [],
   "references": [
+    {"path": "gatsby-plugin-chakra-ui"},
     {"path": "storybook-addon-chakra-ui"},
     {"path": "react-lottie"},
     {"path": "snek-finder"}
