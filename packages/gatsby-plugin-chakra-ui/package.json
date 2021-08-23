@@ -5,5 +5,11 @@
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
     "gatsby": "^3.12.0"
-  }
+  },
+  "files": [
+    "dist",
+    "gatsby-browser.js",
+    "gatsby-ssr.js",
+    "index.js"
+  ]
 }
