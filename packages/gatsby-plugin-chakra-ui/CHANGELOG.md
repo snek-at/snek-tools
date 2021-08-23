@@ -1,3 +1,10 @@
+# [@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.2](https://github.com/snek-at/snek-tools/compare/@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.1...@snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.2) (2021-08-23)
+
+
+### Features
+
+* add option to disable provider ([085521b](https://github.com/snek-at/snek-tools/commit/085521b0b714ad70603ca8d1943b27c3860a2c40))
+
 # @snek-at/gatsby-plugin-chakra-ui-v1.0.0-beta.1 (2021-08-23)
 
 
