@@ -3,6 +3,7 @@
   "version": "1.0.0-beta.2",
   "license": "EUPL-1.2",
   "dependencies": {
+    "@chakra-ui/react": "^1.6.6",
     "gatsby": "^3.12.0"
   }
 }
