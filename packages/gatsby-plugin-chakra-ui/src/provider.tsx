@@ -5,15 +5,21 @@ import theme from './theme'
 
 type WrapRootElementProps = {
   element: React.ReactNode
+  disableProvider?: boolean
   resetCSS?: boolean
   portalZIndex?: number
 }
 
 export const WrapRootElement: React.FC<WrapRootElementProps> = ({
   element,
+  disableProvider = false,
   resetCSS = true,
   portalZIndex = 40
 }) => {
+  if (disableProvider) {
+    return <>{element}</>
+  }
+
   return (
     <ChakraProvider
       theme={theme}
