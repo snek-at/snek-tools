@@ -1,6 +1,6 @@
 {
   "name": "@snek-at/gatsby-plugin-chakra-ui",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "license": "EUPL-1.2",
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
