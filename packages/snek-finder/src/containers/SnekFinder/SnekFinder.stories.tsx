@@ -21,3 +21,12 @@ IPFSBackend.initBackendLink =
   'https://ipfs.io/ipfs/QmSw2QEGRx9PzBXsxt5HoKiong1hkWYN8pNwLKqwNPgaiR'
 
 Primary.args = {backend: IPFSBackend}
+
+export const Selector: Story<SnekFinderProps> = Template.bind({})
+
+Selector.args = {
+  backend: IPFSBackend,
+  mode: 'selector',
+  onSelectorSelect: item => console.log(item),
+  onSelectorClose: () => null
+}

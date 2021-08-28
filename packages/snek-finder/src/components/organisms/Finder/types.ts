@@ -9,6 +9,8 @@ type BasicItem = {
   description?: string
 }
 
+export type FinderMode = 'browser' | 'selector'
+
 export interface FinderFolderItem extends BasicItem {
   isFolder: true
   childUUIDs: string[]
