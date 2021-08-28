@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.8](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.7...@snek-at/snek-finder-v1.0.0-beta.8) (2021-08-28)
+
+
+### Features
+
+* **finder:** add selector mode ([#1](https://github.com/snek-at/snek-tools/issues/1)) ([4c72594](https://github.com/snek-at/snek-tools/commit/4c72594f169654125ec0c987977dccaf2f2a68c2))
+
 # [@snek-at/snek-finder-v1.0.0-beta.7](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.6...@snek-at/snek-finder-v1.0.0-beta.7) (2021-08-22)
 
 
