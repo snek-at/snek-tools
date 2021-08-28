@@ -28,5 +28,5 @@ Selector.args = {
   backend: IPFSBackend,
   mode: 'selector',
   onSelectorSelect: item => console.log(item),
-  onSelectorClose: () => null
+  onSelectorClose: () => console.log('close')
 }
