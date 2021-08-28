@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.9](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.8...@snek-at/snek-finder-v1.0.0-beta.9) (2021-08-28)
+
+
+### Bug Fixes
+
+* improve module import statements ([8a7cdc4](https://github.com/snek-at/snek-tools/commit/8a7cdc416e0d329dd8cfce140b22680a5919699a))
+
 # [@snek-at/snek-finder-v1.0.0-beta.8](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.7...@snek-at/snek-finder-v1.0.0-beta.8) (2021-08-28)
 
 
