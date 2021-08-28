@@ -1,1 +1,2 @@
-export {default as SnekFinder} from './containers/SnekFinder'
+export {default} from './containers/SnekFinder'
+export {IPFSBackend} from './backends/IPFSBackend'
