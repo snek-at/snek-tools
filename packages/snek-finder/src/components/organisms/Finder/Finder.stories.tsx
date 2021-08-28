@@ -67,3 +67,12 @@ Primary.args = {
   onDataChanged: (data, action) => console.log(data, action),
   onItemOpen: () => null
 }
+
+export const Selector: Story<SnekFinderProps> = Primary.bind({})
+
+Selector.args = {
+  ...Primary.args,
+  mode: 'selector',
+  onSelectorSelect: item => console.log(item),
+  onSelectorClose: () => null
+}

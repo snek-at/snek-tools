@@ -6,7 +6,9 @@ import Finder from '../../components/organisms/Finder'
 import type {
   FinderData,
   FinderFileItem,
-  FinderFolderItem
+  FinderFolderItem,
+  FinderItem,
+  FinderMode
 } from '../../components/organisms/Finder/types'
 import {SnekFinderAction} from '../../components/organisms/Finder/types'
 import ImageViewer from '../../components/organisms/ImageViewer'
@@ -15,6 +17,9 @@ import SnekStudio from '../../components/organisms/SnekStudio'
 
 export type SnekFinderProps = {
   backend: Backend
+  mode: FinderMode
+  onSelectorClose?: () => void
+  onSelectorSelect?: (item: FinderItem) => void
 }
 
 const initData: FinderData = {
@@ -76,9 +81,11 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
   }
 
   const file = showModal && (data[showModal.uuid] as FinderFileItem)
+
   return (
     <div>
       <Finder
+        {...props}
         {...{
           rootUUID: 'ae4b3bf8-6ed2-4ac6-bf18-722321af298c',
           data: data as any,

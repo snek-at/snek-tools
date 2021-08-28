@@ -1,13 +1,23 @@
 import {DeleteIcon} from '@chakra-ui/icons'
 import {Box, Divider} from '@chakra-ui/layout'
 import {
+  AbsoluteCenter,
+  Center,
   Flex,
   HStack,
   Icon,
   Image,
+  Portal,
   Text,
   useDisclosure,
-  useToast
+  useToast,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton
 } from '@chakra-ui/react'
 import {FaFile} from '@react-icons/all-files/fa/FaFile'
 import {FaFilePdf} from '@react-icons/all-files/fa/FaFilePdf'
@@ -31,18 +41,23 @@ import {
   FinderData,
   FinderFileItem,
   FinderFolderItem,
+  FinderItem,
+  FinderMode,
   MimeType,
   SnekFinderAction
 } from './types'
 
 export type SnekFinderProps = {
+  mode?: FinderMode
+  onSelectorClose?: () => void
+  onSelectorSelect?: (item: FinderItem) => void
   data: FinderData
   rootUUID: string
   onItemOpen: (uuid: string) => void
   onDataChanged: (data: FinderData, action: SnekFinderAction) => void
 }
 
-const Finder: React.FC<SnekFinderProps> = props => {
+const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
   const toast = useToast()
   const folderCreateContextModal = useDisclosure()
   const itemRenameContextModal = useDisclosure()
@@ -284,12 +299,19 @@ const Finder: React.FC<SnekFinderProps> = props => {
     const uuid = resolveUUIDFromIndex(selectedFiles[0])
     const item = data[uuid]
 
+    setContextMenu(null)
+
     if ((item as FinderFolderItem).isFolder) {
       switchParentNode(uuid)
+    } else {
+      if (mode === 'selector') {
+        if (props.onSelectorSelect) {
+          props.onSelectorSelect(item)
+        }
+      } else {
+        props.onItemOpen(uuid)
+      }
     }
-
-    setContextMenu(null)
-    props.onItemOpen(uuid)
   }
 
   const handleFileRename = () => {
@@ -428,7 +450,7 @@ const Finder: React.FC<SnekFinderProps> = props => {
     }
   }, [isDragActive, isDragAccept, draggedFiles.length])
 
-  return (
+  const finder = (
     <>
       {contextMenu && (
         <Box
@@ -442,7 +464,7 @@ const Finder: React.FC<SnekFinderProps> = props => {
                 ? [
                     {
                       _type: 'ITEM',
-                      content: <>{'Open'}</>,
+                      content: <>{mode === 'selector' ? 'Select' : 'Open'}</>,
                       onItemClick: handleFileOpen
                     },
                     {
@@ -534,6 +556,25 @@ const Finder: React.FC<SnekFinderProps> = props => {
       />
     </>
   )
+
+  if (mode === 'selector' && props.onSelectorClose) {
+    return (
+      <Modal
+        isOpen={true}
+        onClose={props.onSelectorClose}
+        isCentered
+        size="6xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>SnekFinder - Selector</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>{finder}</ModalBody>
+        </ModalContent>
+      </Modal>
+    )
+  }
+
+  return finder
 }
 
 export default Finder
