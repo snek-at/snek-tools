@@ -18,7 +18,7 @@ IPFSBackend.onBackendLinkChange = (link: string) => {
 }
 
 IPFSBackend.initBackendLink =
-  'https://ipfs.io/ipfs/QmSw2QEGRx9PzBXsxt5HoKiong1hkWYN8pNwLKqwNPgaiR'
+  'https://cloudflare-ipfs.com/ipfs/QmSw2QEGRx9PzBXsxt5HoKiong1hkWYN8pNwLKqwNPgaiR'
 
 Primary.args = {backend: IPFSBackend}
 
