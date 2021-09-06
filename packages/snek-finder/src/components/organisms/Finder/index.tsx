@@ -65,10 +65,17 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
   const [showInfoCard, setShowInfoCard] = useState(false)
   const infoCardToggle = () => setShowInfoCard(!showInfoCard)
 
-  const [data, setData] = useState<FinderData>(props.data)
+  let [data, setData] = useState<FinderData>(props.data)
 
   useEffect(() => {
-    setData(props.data)
+    if (
+      JSON.stringify(Object.keys(data)) !==
+      JSON.stringify(Object.keys(props.data))
+    ) {
+      setData(props.data)
+    } else {
+      data = props.data
+    }
   }, [props.data])
   const [rootUUID, setRootUUID] = useState(props.rootUUID)
 

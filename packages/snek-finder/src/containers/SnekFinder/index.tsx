@@ -51,8 +51,6 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
   }, [])
 
   const handleDataChange = async (newData: any, action: SnekFinderAction) => {
-    setData(newData)
-
     if (action.type === 'ADD') {
       const {uuid, file} = action.payload
 
@@ -64,6 +62,9 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
         })
       }
     }
+    console.log('NEWDATA', newData)
+    setData(newData)
+
     backend.writeIndex(newData)
   }
 
