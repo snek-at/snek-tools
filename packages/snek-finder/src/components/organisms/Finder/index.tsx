@@ -501,7 +501,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
           />
         </Box>
       )}
-      <Box h="90vh" w="100%" userSelect="none">
+      <Box maxH="90vh" w="100%" userSelect="none" overflow="hidden">
         <Toolbar
           view="LIST"
           onViewToggleClick={() => null}
@@ -516,7 +516,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
         <Divider />
 
         <Flex>
-          <Box mt={5} mb={5} flex="1" h={'90vh'} overflowY="scroll">
+          <Box mt={5} mb={5} flex="1" maxH="90vh" overflowY="scroll">
             <Box
               {...getRootProps()}
               h={'100%'}
