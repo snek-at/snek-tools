@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.11](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.10...@snek-at/snek-finder-v1.0.0-beta.11) (2021-09-07)
+
+
+### Bug Fixes
+
+* adjust SnekFinder height ([cd91975](https://github.com/snek-at/snek-tools/commit/cd91975b08fa767ca2dbb20c01af80f5a3ab7bec))
+
 # [@snek-at/snek-finder-v1.0.0-beta.10](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.9...@snek-at/snek-finder-v1.0.0-beta.10) (2021-09-07)
 
 
