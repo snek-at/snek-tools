@@ -1,3 +1,16 @@
+# [@snek-at/snek-finder-v1.0.0-beta.10](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.9...@snek-at/snek-finder-v1.0.0-beta.10) (2021-09-07)
+
+
+### Bug Fixes
+
+* fix SnekFinder selector scrolling issue ([7917b5d](https://github.com/snek-at/snek-tools/commit/7917b5de92b90c49e1d8af5058db313dd536bbdc))
+* set correct file source ([48a6395](https://github.com/snek-at/snek-tools/commit/48a6395d48f52f77d3e57ddaf8d664b2ab9b8a41))
+
+
+### Features
+
+* **ipfs:** switch from ipfs.io to cloudflare-ipfs.com ([6acedc2](https://github.com/snek-at/snek-tools/commit/6acedc299fddd364b0ed90374bdf24b89bbf051f))
+
 # [@snek-at/snek-finder-v1.0.0-beta.9](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.8...@snek-at/snek-finder-v1.0.0-beta.9) (2021-08-28)
 
 
