@@ -458,7 +458,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
   }, [isDragActive, isDragAccept, draggedFiles.length])
 
   const finder = (
-    <>
+    <Portal>
       {contextMenu && (
         <Box
           pos="absolute"
@@ -561,7 +561,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
         onClose={itemRenameContextModal.onClose}
         onCancel={itemRenameContextModal.onClose}
       />
-    </>
+    </Portal>
   )
 
   if (mode === 'selector' && props.onSelectorClose) {
