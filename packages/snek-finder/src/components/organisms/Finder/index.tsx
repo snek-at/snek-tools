@@ -464,48 +464,50 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
   }, [isDragActive, isDragAccept, draggedFiles.length])
 
   const finder = (
-    <Portal>
+    <>
       {contextMenu && (
-        <Box
-          pos="absolute"
-          top={contextMenu.spawnY}
-          left={contextMenu.spawnX}
-          w="3xs">
-          <FileContextMenu
-            items={
-              contextMenu.id !== undefined
-                ? [
-                    {
-                      _type: 'ITEM',
-                      content: <>{mode === 'selector' ? 'Select' : 'Open'}</>,
-                      onItemClick: handleFileOpen
-                    },
-                    {
-                      _type: 'ITEM',
-                      content: <>{'Rename'}</>,
-                      onItemClick: handleFileRename
-                    },
-                    {
-                      _type: 'ITEM',
-                      content: (
-                        <HStack spacing={2}>
-                          <DeleteIcon />
-                          <Text>Delete</Text>
-                        </HStack>
-                      ),
-                      onItemClick: handleFileDelete
-                    }
-                  ]
-                : [
-                    {
-                      _type: 'ITEM',
-                      content: <>{'New folder'}</>,
-                      onItemClick: handleNewFolder
-                    }
-                  ]
-            }
-          />
-        </Box>
+        <Portal>
+          <Box
+            pos="absolute"
+            top={contextMenu.spawnY}
+            left={contextMenu.spawnX}
+            w="3xs">
+            <FileContextMenu
+              items={
+                contextMenu.id !== undefined
+                  ? [
+                      {
+                        _type: 'ITEM',
+                        content: <>{mode === 'selector' ? 'Select' : 'Open'}</>,
+                        onItemClick: handleFileOpen
+                      },
+                      {
+                        _type: 'ITEM',
+                        content: <>{'Rename'}</>,
+                        onItemClick: handleFileRename
+                      },
+                      {
+                        _type: 'ITEM',
+                        content: (
+                          <HStack spacing={2}>
+                            <DeleteIcon />
+                            <Text>Delete</Text>
+                          </HStack>
+                        ),
+                        onItemClick: handleFileDelete
+                      }
+                    ]
+                  : [
+                      {
+                        _type: 'ITEM',
+                        content: <>{'New folder'}</>,
+                        onItemClick: handleNewFolder
+                      }
+                    ]
+              }
+            />
+          </Box>
+        </Portal>
       )}
       <Box h="90vh" w="100%" userSelect="none" overflow="hidden">
         <Toolbar
@@ -567,7 +569,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
         onClose={itemRenameContextModal.onClose}
         onCancel={itemRenameContextModal.onClose}
       />
-    </Portal>
+    </>
   )
 
   if (mode === 'selector' && props.onSelectorClose) {
