@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.14](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.13...@snek-at/snek-finder-v1.0.0-beta.14) (2021-09-14)
+
+
+### Bug Fixes
+
+* **finder:** move portal to correct location ([b2bdf95](https://github.com/snek-at/snek-tools/commit/b2bdf95f34eaf7745c89f95926237a1bf9cf4edb))
+
 # [@snek-at/snek-finder-v1.0.0-beta.13](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.12...@snek-at/snek-finder-v1.0.0-beta.13) (2021-09-14)
 
 
