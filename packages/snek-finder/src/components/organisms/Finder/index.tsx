@@ -28,6 +28,7 @@ import {useDropzone} from 'react-dropzone'
 
 import {MimeTypes} from '../../../common/mimeTypes'
 import {fileToBase64} from '../../../common/toBase64'
+import {isValidHttpUrl} from '../../../common/url'
 import {uuidv4} from '../../../common/uuid'
 import ContextModal from '../../molecules/ContextModal'
 import FileContextMenu from '../../molecules/FileContextMenu'
@@ -313,7 +314,12 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
     } else {
       if (mode === 'selector') {
         if (props.onSelectorSelect) {
-          props.onSelectorSelect(item)
+          const url = (item as FinderFileItem).src
+          // check if url is valid
+
+          if (isValidHttpUrl(url)) {
+            props.onSelectorSelect(item)
+          }
         }
       } else {
         props.onItemOpen(uuid)
