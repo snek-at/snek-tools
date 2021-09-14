@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.12](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.11...@snek-at/snek-finder-v1.0.0-beta.12) (2021-09-14)
+
+
+### Bug Fixes
+
+* **contextmenu:** add portal to spawn the menu correctly ([eb39540](https://github.com/snek-at/snek-tools/commit/eb39540b1be5558921efbe598192d59c14654705))
+
 # [@snek-at/snek-finder-v1.0.0-beta.11](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.10...@snek-at/snek-finder-v1.0.0-beta.11) (2021-09-07)
 
 
