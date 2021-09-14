@@ -471,6 +471,7 @@ const Finder: React.FC<SnekFinderProps> = ({mode = 'browser', ...props}) => {
             pos="absolute"
             top={contextMenu.spawnY}
             left={contextMenu.spawnX}
+            zIndex="popover"
             w="3xs">
             <FileContextMenu
               items={
