@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.13](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.12...@snek-at/snek-finder-v1.0.0-beta.13) (2021-09-14)
+
+
+### Bug Fixes
+
+* **selector:** only select if image is valid ([c0e6ee8](https://github.com/snek-at/snek-tools/commit/c0e6ee8bc7b31606ac7e2a4d2307fa602ded62cf))
+
 # [@snek-at/snek-finder-v1.0.0-beta.12](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.11...@snek-at/snek-finder-v1.0.0-beta.12) (2021-09-14)
 
 
