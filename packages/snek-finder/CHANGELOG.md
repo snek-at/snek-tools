@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.15](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.14...@snek-at/snek-finder-v1.0.0-beta.15) (2021-09-14)
+
+
+### Bug Fixes
+
+* **finder:** add zindex to contextmenu ([9dbbce5](https://github.com/snek-at/snek-tools/commit/9dbbce5d5089e120637124430d4d017c7252dbdc))
+
 # [@snek-at/snek-finder-v1.0.0-beta.14](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.13...@snek-at/snek-finder-v1.0.0-beta.14) (2021-09-14)
 
 
