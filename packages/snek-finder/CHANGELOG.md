@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.16](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.15...@snek-at/snek-finder-v1.0.0-beta.16) (2021-09-27)
+
+
+### Bug Fixes
+
+* **snekfinder:** change position of imageviewer to fixed ([29ae2ae](https://github.com/snek-at/snek-tools/commit/29ae2aed70895abb681e94d97f66fe044611289a))
+
 # [@snek-at/snek-finder-v1.0.0-beta.15](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.14...@snek-at/snek-finder-v1.0.0-beta.15) (2021-09-14)
 
 
