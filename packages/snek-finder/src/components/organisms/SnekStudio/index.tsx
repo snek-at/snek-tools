@@ -6,7 +6,7 @@ export type SnekStudioProps = {
   /**
    * Called when the editor should be closed with saving the editing state
    */
-  onComplete(dataURL: string): void
+  onComplete(file: Blob | null, dataURL: string): void
   /**
    * Called when the editor should be closed without saving the editing state
    */
@@ -39,9 +39,9 @@ const SnekStudio: React.FC<SnekStudioProps> = props => {
       src={props.src}
       onClose={props.onClose}
       onComplete={({canvas}: {canvas: HTMLCanvasElement}) => {
-        const dataURL = canvas.toDataURL('image/png')
-
-        props.onComplete(dataURL)
+        canvas.toBlob(blob => {
+          props.onComplete(blob, canvas.toDataURL('image/png'))
+        })
       }}
       onBeforeComplete={() => false}
     />

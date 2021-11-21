@@ -3,6 +3,7 @@ import React from 'react'
 
 import SnekFinder, {SnekFinderProps} from '.'
 import IPFSBackend from '../../backends/IPFSBackend'
+import OSGBackend from '../../backends/OSGBackend'
 
 export default {
   title: 'Applications/SnekFinder',
@@ -11,7 +12,7 @@ export default {
 
 const Template: Story<SnekFinderProps> = args => <SnekFinder {...args} />
 
-export const Primary: Story<SnekFinderProps> = Template.bind({})
+export const IPFS: Story<SnekFinderProps> = Template.bind({})
 
 IPFSBackend.onBackendLinkChange = (link: string) => {
   console.log(link)
@@ -20,12 +21,29 @@ IPFSBackend.onBackendLinkChange = (link: string) => {
 IPFSBackend.initBackendLink =
   'https://cloudflare-ipfs.com/ipfs/QmSw2QEGRx9PzBXsxt5HoKiong1hkWYN8pNwLKqwNPgaiR'
 
-Primary.args = {backend: IPFSBackend}
+IPFS.args = {backend: IPFSBackend}
 
-export const Selector: Story<SnekFinderProps> = Template.bind({})
+export const IPFSSelector: Story<SnekFinderProps> = Template.bind({})
 
-Selector.args = {
+IPFSSelector.args = {
   backend: IPFSBackend,
+  mode: 'selector',
+  onSelectorSelect: item => console.log(item),
+  onSelectorClose: () => console.log('close')
+}
+
+export const OpenStorage: Story<SnekFinderProps> = Template.bind({})
+
+OSGBackend.onBackendLinkChange = (link: string) => {
+  console.log(link)
+}
+
+OpenStorage.args = {backend: OSGBackend, mode: 'browser'}
+
+export const OpenStorageSelector: Story<SnekFinderProps> = Template.bind({})
+
+OpenStorageSelector.args = {
+  backend: OSGBackend,
   mode: 'selector',
   onSelectorSelect: item => console.log(item),
   onSelectorClose: () => console.log('close')

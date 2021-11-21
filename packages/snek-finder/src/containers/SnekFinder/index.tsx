@@ -112,11 +112,23 @@ const SnekFinder: React.FC<SnekFinderProps> = ({backend, ...props}) => {
       {showModal && showModal.type === 'SNEK_STUDIO' && file && (
         <SnekStudio
           src={file.src}
-          onComplete={src => {
-            const newData = update(data, {[showModal.uuid]: {src: {$set: src}}})
+          onComplete={async (blob, dataURL) => {
+            // convert dataUri to blob
 
-            setData(newData)
-            backend.writeIndex(newData)
+            setData(update(data, {[showModal.uuid]: {src: {$set: dataURL}}}))
+
+            // upload blob to backend
+            if (blob) {
+              const url = await backend.upload(new File([blob], file.name))
+
+              const newData = update(data, {
+                [showModal.uuid]: {src: {$set: url}}
+              })
+
+              setData(newData)
+
+              backend.writeIndex(newData)
+            }
           }}
           onClose={() => setShowModal({...showModal, type: 'IMAGE_VIEWER'})}
         />
