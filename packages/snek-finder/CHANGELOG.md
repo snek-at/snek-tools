@@ -1,3 +1,10 @@
+# [@snek-at/snek-finder-v1.0.0-beta.17](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.16...@snek-at/snek-finder-v1.0.0-beta.17) (2021-11-21)
+
+
+### Features
+
+* **snekfinder:** add open-storage-gateway backend ([1612b80](https://github.com/snek-at/snek-tools/commit/1612b80a59a675a93f8bef4da295940609c42433))
+
 # [@snek-at/snek-finder-v1.0.0-beta.16](https://github.com/snek-at/snek-tools/compare/@snek-at/snek-finder-v1.0.0-beta.15...@snek-at/snek-finder-v1.0.0-beta.16) (2021-09-27)
 
 
